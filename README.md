@@ -85,10 +85,3 @@ The following containers are deployed using Docker:
 - **Search Engine:** Elasticsearch 7.17.6
 - **Monitoring:** Prometheus 3.1.0, Grafana 11.4.0
 
-## Screenshots
-1. **Landing Page:** Displays tickets with pagination and search.
-2. **Create/Edit Ticket Pages:** Dynamically create or edit tickets.
-3. **Monitoring Dashboard:** Prometheus metrics visualized via Grafana.
-
-## Conclusion
-The Ticketmaster application is a robust, scalable system with advanced search capabilities and comprehensive monitoring. Its modular architecture and Dockerized deployment make it suitable for a variety of environments.
