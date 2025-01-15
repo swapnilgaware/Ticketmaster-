@@ -1,0 +1,30 @@
+global:
+  scrape_interval: 15s  # How often to scrape targets by default.
+  evaluation_interval: 15s  # How often to evaluate rules.
+
+scrape_configs:
+  # Scrape application metrics
+  - job_name: "app"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["app:5000"]
+
+  # Scrape system metrics using Node Exporter
+  - job_name: "node_exporter"
+    static_configs:
+      - targets: ["node_exporter:9100"]
+
+  # Scrape Elasticsearch metrics using Elasticsearch Exporter
+  - job_name: "elasticsearch"
+    static_configs:
+      - targets: ["elasticsearch-exporter:9114"]  # Use the Elasticsearch Exporter
+
+  # Scrape MongoDB metrics using MongoDB Exporter
+  - job_name: "mongo"
+    static_configs:
+      - targets: ["mongodb-exporter:9216"]  # Use the MongoDB Exporter
+
+  # Scrape Prometheus metrics
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["prometheus:9090"]
